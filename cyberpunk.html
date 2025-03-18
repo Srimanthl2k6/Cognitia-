@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Invitation</title>
+    <style>
+        body {
+            background: black;
+            color: cyan;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+        .glitch {
+            font-size: 2em;
+            font-weight: bold;
+            position: relative;
+        }
+        .glitch-effect {
+            background: #111;
+            filter: invert(1) hue-rotate(180deg);
+            animation: glitch-screen 0.2s infinite alternate;
+        }
+        @keyframes glitch-screen {
+            0% { transform: scale(1.02); filter: contrast(2) hue-rotate(20deg); }
+            100% { transform: scale(1); filter: contrast(1) hue-rotate(-20deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="glitch">Want to embrace your robotic self?</h1>
+    <p class="subtext">Join us during <span style="color: magenta;">AEON</span> and find out.</p>
+    <button class="join-btn" onclick="glitchEffect()">JOIN AEON</button>
+    
+    <script>
+        function glitchEffect() {
+            document.body.classList.add("glitch-effect");
+            setTimeout(() => {
+                document.body.classList.remove("glitch-effect");
+                window.location.href = "https://docs.google.com/forms/d/12clS1p0NFHffuCL_RrcQ7XiCjMn38u3p0DtJOoxT9WE/edit";
+            }, 700);
+        }
+    </script>
+</body>
+</html>
